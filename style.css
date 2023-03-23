@@ -1,0 +1,392 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('live-your-dream-painted-rocks-41197709.jpg');
+    background-size: cover;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-family: sans-serif;
+    font-size: 2.5em;
+}
+
+.logo span {
+    color: #e74c3c;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 10px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.menu a:first-child {
+    color: #e74c3c;
+}
+
+.menu a:hover {
+    color: #e74c3c;
+    transition: 0.4s;
+}
+
+.icon i {
+    font-size: 20px;
+}
+
+.icon i:hover {
+    color: #e74c3c;
+}
+
+.icon a {
+    text-decoration: none;
+    background: #e74c3c;
+    color: white;
+    padding: 10px 10px;
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+.h-text {
+    color: white;
+    max-width: 1000px;
+    position: absolute;
+    font-size: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%, -90%);
+}
+
+.h-text input {
+    width: 80%;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+.h-text h6 {
+    line-height: 30px;
+}
+
+.h-text button {
+    width: 7%;
+    padding: 5px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+.filter-gallery {
+    padding: 100px;
+}
+
+.portfolio-menu {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-menu ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    text-align: center;
+}
+
+.portfolio-menu ul li:hover {
+    color: white;
+    background: #e74c3c;
+    border-radius: 8px;
+}
+
+li.active {
+    color: white;
+    background: #e74c3c;
+    border-radius: 8px;
+}
+
+.portfolio-item {
+    width: 100%;
+}
+
+.portfolio-item .item {
+    width: 360px;
+    height: 360px;
+    float: left;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.portfolio-item .item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.member {
+    width: 100%;
+    padding: 10px 100px;
+    font-family: sans-serif;
+}
+
+.member-info h1 {
+    text-align: center;
+    font-size: 2.5em;
+    padding: 40px 0px;
+}
+
+.member-info h2 {
+    padding: 10px 0px;
+}
+
+.member-info p {
+    font-size: 20px;
+}
+
+.member-info h1 span {
+    color: hsl(355, 79%, 49%);
+}
+
+.main {
+    background: url(11632970407u0160szxaft04ndppsjorycaavyg53hlgcnejwzri0yjgl5a9ofwckickdvucw5ofta110fynroaiigggh9pzevrgutk9iby68mq.jpg);
+    background-size: 280%;
+    background-position: -400px 0px;
+    width: 600px;
+    margin: 100px auto 0px auto;
+    font-family: sans-serif;
+    padding: 20px 30px;
+}
+
+div.register {
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+form#register {
+    margin: 40px;
+}
+
+label {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-style: bold;
+}
+
+input#name {
+    width: 300px;
+    border: 1px solid #add;
+    border-radius: 3px;
+    outline: 0;
+    padding: 7px;
+}
+
+input#Submit {
+    width: 200px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: chocolate;
+    margin-bottom: 20px;
+}
+
+.members {
+    width: 100%;
+    padding: 20px 100px;
+    font-family: sans-serif;
+}
+
+.members-info {
+    text-align: center;
+}
+
+.members-info h1 {
+    font-size: 2.5em;
+}
+
+.members-info h1 span {
+    color: #e74c3c;
+}
+
+.members-card {
+    text-align: center;
+    padding: 50px;
+    width: 50%;
+    margin: auto;
+}
+
+.members-card p {
+    margin: 20px 0px;
+    line-height: 2em;
+}
+
+.members-card h2 {
+    margin: 20px 0px;
+}
+
+.m-images {
+    width: 100%;
+    display: flex;
+    margin: 20px 0px;
+    overflow: hidden;
+}
+
+.m-images img {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.m-images img:hover {
+    transform: scale(1.5);
+}
+
+footer {
+    width: 100%;
+    padding: 50px 100px;
+    background: #262626;
+}
+
+.newsletter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.newsletter>div {
+    flex-basis: 50%;
+}
+
+.ntext {
+    text-align: right;
+}
+
+.newsletter h2 {
+    font-size: 2em;
+    font-family: sans-serif;
+}
+
+.newsletter p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.newsletter label {
+    position: relative;
+}
+
+.newsletter input {
+    padding: 20px;
+    width: 70%;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+}
+
+.newsletter button {
+    position: absolute;
+    right: 0;
+    padding: 20px;
+    width: 30%;
+    color: white;
+    background: #e74c3c;
+    border: none;
+    outline: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+}
+
+.f-contact {
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.f-contact>div {
+    flex-basis: 20%;
+}
+
+.f-contact p {
+    line-height: 2em;
+    font-size: 20px;
+    color: grey;
+    cursor: pointer;
+}
+
+.f-contact p:hover {
+    color: white;
+}
+
+.f-contact p a {
+    color: grey;
+}
+
+.f-contact p a:hover {
+    color: white;
+}
+
+.f-contact i {
+    background: white;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    margin: 20px 5px;
+    border-radius: 50%;
+    transition: 0.4s ease;
+}
+
+.f-contact i:hover {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}

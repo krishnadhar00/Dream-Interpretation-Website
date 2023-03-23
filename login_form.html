@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        #form {
+            width: 300px;
+            margin: 50px auto 0 auto;
+            padding: 60px;
+            background-color: whitesmoke;
+            border-radius: 4px;
+            font-size: 12px;
+            float: right;
+            transform: translate(-20%, 5%);
+        }
+
+        #form h1 {
+            color: #0f2027;
+            text-align: center;
+        }
+
+        #form button {
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+            color: white;
+            background-color: rgb(41, 57, 194);
+            border: none;
+            border-radius: 4px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .input-control {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-control input {
+            border: 2px solid #f0f0f0;
+            border-radius: 4px;
+            display: block;
+            font-size: 12px;
+            padding: 10px;
+            width: 100%;
+        }
+
+
+        header {
+            width: 100%;
+            height: 90vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('live-your-dream-painted-rocks-41197709.jpg');
+            background-size: cover;
+        }
+
+        nav {
+            width: 100%;
+            height: 80px;
+            background: white;
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 40px;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            font-family: sans-serif;
+            font-size: 2.5em;
+        }
+
+        .logo span {
+            color: #e74c3c;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 30px;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+
+        .menu a:first-child {
+            color: #e74c3c;
+        }
+
+        .menu a:hover {
+            color: #e74c3c;
+            transition: 0.4s;
+        }
+
+        .icon a {
+            text-decoration: none;
+            background: white;
+            color: white;
+            padding: 10px 0px;
+            margin-left: 80px;
+            border-radius: 5px;
+        }
+
+        .h-text {
+            color: white;
+            max-width: 1000px;
+            position: absolute;
+            font-size: 25px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-100%, -60%);
+        }
+
+        .h-text input {
+            width: 80%;
+            padding: 5px;
+            border: none;
+            outline: none;
+            border-radius: 8px;
+        }
+
+        .h-text h6 {
+            line-height: 30px;
+        }
+    </style>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                Dream <span>Inter</span>pretation
+            </div>
+            <div class="menu">
+                <a href="project.html">Home</a>
+                <a href="#login">Sign up</a>
+            </div>
+            <div class="icon">
+                <a href="login_form.html">Login</a>
+            </div>
+
+        </nav>
+        <section class="h-text">
+            <h1>Dream Interpretations</h1>
+            <h3>Find the meaning of your dream today.</h3>
+            <input type="text" name="" placeholder="Search here...">
+            <h6>Browse Dictionary:A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</h6>
+        </section>
+
+        <div class="container">
+            <form id="form" method="get" name="logform" onsubmit="return validatedform()">
+                <h1 id="login">Registration</h1>
+                <div class="input-control">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text">
+                    <div class="error"></div>
+                    <br>
+                </div>
+                <div class="input-control">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="text">
+                    <div class="error"></div>
+                </div><br>
+                <div class="input-control">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password">
+                    <div class="error"></div>
+                </div><br>
+                <div class="input-control">
+                    <label for="password2">Password again</label>
+                    <input id="password2" name="password2" type="password">
+                    <div class="error"></div>
+                </div><br>
+                <button type="submit" name="submit">Sign Up</button>
+            </form>
+    </header>
+    <script>
+        function validatedform() {
+            let username = document.forms["logform"]["username"];
+            let email = document.forms["logform"]["email"];
+            let pass = document.forms["logform"]["password"];
+            let pass2 = document.forms["logform"]["password2"];
+            let submit = document.forms["logform"]["submit"];
+            if (username.value == "") {
+                alert("user name is required.");
+                username.focus();
+                return false;
+            }
+            if (email.value == "") {
+                alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+            if (email.value.indexOf("@", 0) < 0) {
+                alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+            if (email.value.indexOf(".", 0) < 0) {
+                alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+            if (pass.value == "") {
+                alert("Password is required ");
+                pass.focus();
+                return false;
+            }
+            if (pass.value.length < 8) {
+                alert("Password must be atleast 8 characters ");
+                pass.focus();
+                return false;
+            }
+            if (pass.value != pass2.value) {
+                alert("Password does not match ");
+                pass.focus();
+                return false;
+            }
+            if (isNaN(submit)) {
+                alert("your email has been saved successfully ");
+                pass.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+    </div>
+
+</body>
+
+</html>
